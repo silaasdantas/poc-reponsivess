@@ -131,11 +131,12 @@ body {
 }
 
 /* DESKTOP NAVBAR */
+
 .desktop-nav {
+  overflow: hidden;
   display: flex;
   align-content: center;
   justify-content: center;
-
   background-color: #ffffff;
   border-radius: 2.06rem;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
@@ -149,14 +150,12 @@ body {
   translate: -50%;
   top: 36px;
 }
-
 .desktop-nav .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .desktop-nav .logo img {
   max-height: 47.9px;
 }
