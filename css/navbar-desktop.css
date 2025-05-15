@@ -1,0 +1,228 @@
+.navbar {
+  background-color: #ffffff;
+  border-radius: 2.06rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  padding: 22px 33px;
+  width: 1600px;
+  height: 99px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 36px;
+  display: none;
+}
+
+.navbar .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  float: left;
+  color: var(--purple-1, #2b2d75);
+  text-align: center;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  display: flex;
+  gap: 8.8px;
+  border: none;
+  outline: none;
+  color: var(--purple-1, #2b2d75);
+  padding: 11px 16.5px;
+  background-color: inherit;
+  text-align: center;
+  font-size: 1.513rem;
+  line-height: var(--label-large-line-height, 22.02px);
+  letter-spacing: var(--label-large-tracking, 0.11px);
+  margin: 0;
+}
+
+.subnavbtn > span {
+  font-weight: 500;
+}
+
+.subnavbtn:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 50px;
+}
+
+.subnav-content {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  position: absolute;
+  width: 85.625%;
+  z-index: 1;
+  left: 50%;
+  translate: -50%;
+  top: 115px;
+
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #494b8a;
+  border-width: 1px;
+  padding: 10px 30px 30px 30px;
+  align-items: flex-start;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subnav.open .subnav-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.subnav-title {
+  color: #2b2d75;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.subnav-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  position: relative;
+}
+
+.subnav-content-video {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  position: relative;
+}
+
+.subnav-content-menus {
+  padding: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  row-gap: 22px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-shrink: 0;
+  width: 810px;
+  position: relative;
+}
+
+.subnav-content-video .subnav-video-title {
+  color: #2b2d75;
+  text-align: left;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.subnav-content-video .subnav-video {
+  flex: 1;
+  width: 450px;
+  position: static;
+}
+
+.subnav-content-video .subnav-video .play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  overflow: visible;
+}
+
+.subnav-content-menus .subnav-menu {
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 390px;
+  height: 160px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.subnav-content-menus .subnav-menu:hover {
+  background-color: rgba(66, 68, 139, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subnav-menu .subnav-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.subnav-menu .subnav-menu-content .subnav-menu-content-title {
+  color: #2b2d75;
+  text-align: left;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  position: relative;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.subnav-menu .subnav-menu-content .subnav-menu-content-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  color: #000000;
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0156rem;
+  font-weight: 400;
+}
+
+.arrow_right {
+  position: relative;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}

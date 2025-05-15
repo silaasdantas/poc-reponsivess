@@ -49,3 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+document.querySelectorAll('.subnavbtn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        // Fecha todos os outros menus
+        document.querySelectorAll('.subnav').forEach(sub => {
+            if (sub !== btn.parentElement) sub.classList.remove('open');
+        });
+        // Alterna o menu clicado
+        btn.parentElement.classList.toggle('open');
+    });
+});
+
+// Fecha o menu ao clicar fora
+document.addEventListener('click', function () {
+    document.querySelectorAll('.subnav').forEach(sub => sub.classList.remove('open'));
+});
